@@ -1,7 +1,15 @@
 {
-  "name": "landing-contacto-backend",
+  "name": "api",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.ts",
+    "start": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@emailjs/nodejs": "^5.0.2",
     "axios": "^1.10.0",
@@ -25,21 +33,5 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.ts",
-    "start": "node src/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GahelMqz/landing-contacto-backend.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GahelMqz/landing-contacto-backend/issues"
-  },
-  "homepage": "https://github.com/GahelMqz/landing-contacto-backend#readme",
   "description": ""
 }

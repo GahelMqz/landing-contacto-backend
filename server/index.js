@@ -5,22 +5,22 @@ const mysql = require('mysql2/promise')
 const Joi = require('joi')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-// const verifyToken = require('../server/middleware/verifyToken')
+const verifyToken = require('../server/middleware/verifyToken')
 const router = express.Router()
 
 const app = express()
-const port = process.env.PORT || '3001'
+const port = process.env.PORT || 3001
 
 app.use(cors())
 app.use(express.json())
 
 // Configuración de conexión
 const pool = mysql.createPool({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
+  host: process.env.DB_HOST || 'localhost',
+  port: process.env.DB_PORT || 3306,
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || '',
+  database: process.env.DB_NAME || 'acuario_db',
 })
 
 const contactoSchema = Joi.object({
