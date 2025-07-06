@@ -5,7 +5,7 @@ const mysql = require('mysql2/promise')
 const Joi = require('joi')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const verifyToken = require('../server/middleware/verifyToken')
+// const verifyToken = require('../server/middleware/verifyToken')
 const router = express.Router()
 
 const app = express()
